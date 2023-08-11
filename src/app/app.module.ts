@@ -4,15 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './tictactoe/main.component';
-
+import { StartComponent } from './start.component';
+import { FieldComponent } from './tictactoe/field.component';
+import { MenuComponent } from './tictactoe/menu.component';
+import { CellComponent } from './tictactoe/cell.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    StartComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FieldComponent,
+    CellComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
