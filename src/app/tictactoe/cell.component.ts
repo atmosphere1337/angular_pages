@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
       <div class="tictactoe-cell-outer">
-          <div class="tictactoe-cell" (click)="fnc()">
-       {{value}} 
+        <div class="tictactoe-cell" (click)="click_left()">
+            {{value}} 
         </div>
       </div>
   `,
@@ -18,13 +18,11 @@ import { CommonModule } from '@angular/common';
           height: 100%
           width: 100%
           box-sizing: border-box
-          border: solid
       .tictactoe-cell
           background-color: white          
           height: 100%
           width: 100%
           box-sizing: border-box
-          border: solid
           display: flex
           align-items: center
           justify-content: center
@@ -32,9 +30,21 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class CellComponent {
-    @Input() value = ""
-    fnc():void
+    value = ""
+    @Input() turn = 0
+    @Input() pos = 0
+    @Output() turned = new EventEmitter<any>()
+    click_left():void
     {
-        alert('How are you doing?')
+        if (this.turn == 1 && this.value == "")
+        {
+            this.value = "X"
+            this.turned.emit(this.pos);
+        }
+        else if (this.turn == 2 && this.value == "")
+        {
+            this.value = "O"
+            this.turned.emit(this.pos);
+        }
     }
 }
