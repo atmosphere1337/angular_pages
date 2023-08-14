@@ -8,12 +8,14 @@ import { StartComponent } from './start.component';
 import { FieldComponent } from './tictactoe/field.component';
 import { MenuComponent } from './tictactoe/menu.component';
 import { CellComponent } from './tictactoe/cell.component';
+import { HighlightDirective } from './tictactoe/highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     StartComponent,
-    MenuComponent
+    MenuComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
