@@ -1,0 +1,9 @@
+services:
+  angular_nginx:
+    container_name: "angular_nginx"
+    build: .
+    ports:
+    - "80:80"
+    volumes:
+    - "./docker/conf.d:/etc/nginx/conf.d/"
+    - ".:/var/www/html/"
