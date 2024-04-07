@@ -15,7 +15,7 @@ import { HighlightDirective } from './tictactoe/highlight.directive';
     MainComponent,
     StartComponent,
     MenuComponent,
-    HighlightDirective
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

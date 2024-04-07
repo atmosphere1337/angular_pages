@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   template: `
       <nav>
         <a routerLink = "">Home</a> | 
-        <a routerLink = "tictactoe">TicTacToe</a>
+        <a routerLink = "tictactoe">TicTacToe</a> |
+        <a routerLink = "quiz">Quiz</a>
       </nav>
   `,
   styles: [
